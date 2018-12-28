@@ -3,9 +3,10 @@
 /* S: main */
 .contents {background:#efefef;}
 .bx-wrapper {position: relative; }
-.main01 {width:1100px;min-height:500px;margin:0 auto;padding:25px 0 0 0;}
-.main01 .headline-wrap {float: left;width: 741px;}
-.main01 .headline-wrap ~ section[class$="wrap"] {position:relative;float: left;width: 345px;margin-left:14px;margin-bottom:14px;background: #fff;}
+.main01 {width:1100px;min-height:500px;margin:0 auto;padding:25px 0;}
+.main01 .headline-wrap {float: left;width: 740px;}
+.main01 .headline-wrap ~ section[class$="wrap"] {position:relative;float: left;width: 345px;margin-left:13px;margin-bottom:14px;background: #fff;}
+.main01 section[class$="wrap"] .body {overflow: hidden;box-sizing: border-box;}
 .main01 .bar-part:after {margin: -4px 3px 0 8px;content: '|';color: #7f7f7f;font-size: 11px;}
 
 /* .visual-wrap  */
@@ -25,21 +26,30 @@
 
 /* myInfo */
 .myInfo-wrap {height: 335px;}
-.myInfo-wrap .btn-setting {position: absolute;right: 0;top:0;width: 43px;height: 46px;border-left: 1px solid #064099;background:url(/site/kotranews/images/main/btn-setting.png) no-repeat 0 0;}
+.myInfo-wrap .btn-setting {position: absolute;right: 0;top:-46px;width: 43px;height: 46px;border-left: 1px solid #064099;background:url(/site/kotranews/images/main/btn-setting.png) no-repeat 0 0;}
 .myInfo-wrap .head {position: relative;border-color: #0c53a4;background: #0c53a4;color: #fff; }
 .myInfo-wrap .head h3 {height: 46px; line-height: 46px;padding-left: 20px; margin-right: 43px; border-right: 1px solid #1463ae; } 
-.myInfo-wrap .body {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
-.myInfo-wrap .body > li {float: left;margin-left: 5px;margin-top: 10px}
-.myInfo-wrap .body > li:first-child {margin-left: 200px;}
-.myInfo-wrap .body > li .tab-tit {display: inline-block;min-width: 40px;height: 24px;line-height: 22px;padding: 0 5px;background: #fff;border: 1px solid #10417a;border-radius: 5px;font-size: 12px;text-align: center;}
-.myInfo-wrap .body > li.on .tab-tit {background: #0077ff;color: #fff;font-weight: 700}
-.myInfo-wrap .body > li .list {display: none;position: absolute;left: 0;top:55px;width: 100%;}
-.myInfo-wrap .body > li.on .list {display: block;}
-.myInfo-wrap .body > li .list li {padding: 8px 20px;}
-.myInfo-wrap .body > li .list li+li{border-top: 1px solid #ececec}
-.myInfo-wrap .body > li .list a {display: block;line-height: 1.6;}
-.myInfo-wrap .body > li .list a:hover {text-decoration: underline;}
-.myInfo-wrap .body > li .list .etc {font-size: 13px;}
+.myInfo-wrap .body {position: relative;height: 289px;border: 1px solid #dbdbdb;border-top: 0;overflow: visible !important;}
+.myInfo-wrap .body > ul {position: absolute;left: 0;top: -46px;width: 100%;height: 100%;}
+.myInfo-wrap .body > ul > li {float: left;margin-left: 5px;margin-top: 10px}
+.myInfo-wrap .body > ul > li:first-child {margin-left: 200px;}
+.myInfo-wrap .body > ul > li .tab-tit {display: inline-block;min-width: 40px;height: 24px;line-height: 22px;padding: 0 5px;background: #fff;border: 1px solid #10417a;border-radius: 5px;font-size: 12px;text-align: center;}
+.myInfo-wrap .body > ul > li.on .tab-tit {background: #0077ff;color: #fff;font-weight: 700}
+.myInfo-wrap .body > ul > li .list {display: none;position: absolute;left: 0;top:55px;width: 100%;}
+.myInfo-wrap .body > ul > li.on .list {display: block;}
+.myInfo-wrap .body > ul > li .list li {padding: 8px 20px;}
+.myInfo-wrap .body > ul > li .list li+li{border-top: 1px solid #ececec}
+.myInfo-wrap .body > ul > li .list a {display: block;line-height: 1.6;}
+.myInfo-wrap .body > ul > li .list a:hover {text-decoration: underline;}
+.myInfo-wrap .body > ul > li .list .etc {font-size: 13px;}
+
+/* weekend-wrap */
+.weekend-wrap {border: 1px solid #3b3a3f;overflow: hidden;}
+.weekend-wrap img {width: 100%}
+
+/* share-wrap */
+.share-wrap {border: 1px solid #dfdfdf;overflow: hidden;}
+.share-wrap img {width: 100%}
 
 /* bbs-wrap & report-wrap & photo-wrap */
 .bbs-wrap, .report-wrap, .photo-wrap {position:relative;padding: 0;background:#fff;border: 1px solid #dbdbdb;}
@@ -47,7 +57,7 @@
 .bbs-wrap .btn-more, .report-wrap .btn-more, .photo-wrap .btn-more {position: absolute;right:0;top:0;width:35px;height: 40px;background:url(/site/kotranews/images/main/btn-more.png) no-repeat 0 0;}
 
 /* bbs-wrap */
-.bbs-wrap {height: 855px;}
+.bbs-wrap {height: 859px;}
 .bbs-wrap .head {height: 53px;line-height: 53px;}
 .bbs-wrap .body {padding: 15px;}
 .bbs-wrap .list li {height:110px;padding: 24px 0;}
@@ -62,7 +72,11 @@
 
 /* report-wrap */
 .report-wrap {height:200px;}
-.report-wrap .body {padding: 20px;}
+.report-wrap .body {height: 160px;padding: 20px;}
+.report-wrap .body img {float:left;width: 80px;height: 110px;margin-right:20px;border: 1px solid #dfdfdf;}
+.report-wrap .body a {display: block;}
+.report-wrap .body .tit {font-size:17px;margin-bottom:15px;font-weight:bold;color:#4d4c4c;}
+.report-wrap .body .btn-pdf {display: inline-block;min-width: 60px;height:23px;line-height: 23px;margin-top: -23px;padding: 0 10px;background: #0c53a5;color: #fff;border: 1px solid #0c53a5;border-radius: 1px;font-size: 13px;}
 
 /* photo-wrap */
 .photo-wrap {height:338px;}
