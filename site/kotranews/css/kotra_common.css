@@ -188,7 +188,7 @@ header .logo-wrap .icon-top-sns {float:left;margin-top:22px;}
 .overlay.active {visibility: visible;opacity: 1}
 
 /* 컨텐츠 */
-.banner-wrap {position:relative;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb}
+.banner-wrap {position:relative;margin: 0 auto;background: #fff;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb}
 .banner-wrap .inner-wrap {border-left:1px solid #ebebeb;border-right:1px solid #ebebeb;}
 .banner-wrap .banner_1 .slick-slide{}
 .banner-wrap .banner_1 .slick-prev {display:block;left:-38px;width:38px;height:22px;padding-top:6px;border-bottom:1px solid #ebebeb;margin-top:0;border-right:1px solid #ebebeb;text-align:center;}

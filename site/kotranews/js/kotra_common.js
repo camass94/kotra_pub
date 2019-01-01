@@ -668,25 +668,25 @@ $(document).ready(function(){
     /**
      * 헤드라인 메인 슬라이드
      */
-    var headlineNews = $('.js-headlineNews').bxSlider({
+    /*var headlineNews = $('.js-headlineNews').bxSlider({
         pager : true,
         auto : true,
         autoHover : true,
         spped : 5000,
         controls : false,
         infiniteLoop : true
-    });
+    });*/
     /**
      * 최신보고서 슬라이드
      */
-    var reportNews = $('.js-reportNews').bxSlider({
+    /*var reportNews = $('.js-reportNews').bxSlider({
         pager : true,
         auto : true,
         autoHover : true,
         spped : 5000,
         controls : false,
         infiniteLoop : true
-    });
+    });*/
     /**
      * 인덱스페이지 포토뉴스
      */
@@ -788,7 +788,16 @@ $(document).ready(function(){
   $('[data-bxslider]')
     .each(function(index, elem) {
       var $elem = $(elem);
-      var options = parseJSON($elem.data('bxslider'));
+      var op = {
+        pager : true,
+        auto : true,
+        autoHover : true,
+        spped : 5000,
+        controls : false,
+        infiniteLoop : true
+      }
+      // var options = parseJSON($elem.data('bxslider'));
+      var options = $.extend(true, op, parseJSON($elem.data('bxslider')));
       // From http://bxslider.com/
       if( typeof $elem.bxSlider === 'function' ) {
           $elem

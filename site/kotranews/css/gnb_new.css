@@ -22,3 +22,31 @@ header .top-menu-wrap {height:auto;}
 .gnb-wrap .btn-total-menu span:before {background:#497ebb;}
 .gnb-wrap .btn-total-menu span:after {background:#497ebb;}
 .gnb-wrap > ul > li > .gnb-tit-wrap {top:206px;}
+
+/* snb-area */
+.snb-area {position: absolute;right: 0;top: 234px;z-index: 1000;}
+.snb-area .btn-snb {position: absolute;right: 135px;top: 224px;width: 27px;height:56px;background: #fafafa url(/site/kotranews/images/main/btn-snb.png) no-repeat center;overflow: hidden;font-size: 0;text-indent: -60px;border: 1px solid #dbdbdb;border-right:0;z-index: 1001;}
+.snb-area.on .btn-snb {right: 379px;}
+.snb-area.on .snb-wrap {width: 380px;}
+.snb-wrap {position: absolute;right: 0;top: 0;width: 136px;height: 100%;border: 1px solid #dbdbdb;border-right: 0;overflow: hidden;}
+.snb-wrap  > ul {position: absolute;left: 0;top: 0;width: 380px;height: 100%;background: #fafafa;}
+.snb-wrap .snbDp-1 {position:relative}
+.snb-wrap .snbDp-1>li {padding: 14px 20px;border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .snbDp-1>li:nth-child(odd) {background: #fff;}
+.snb-wrap .snbDp-1>li>.tit {display: inline-block;height: 27px;line-height: 27px;font-size: 15px;color: #464646;padding-left: 35px;letter-spacing: -1.5px;}
+.snb-wrap .snbDp-1-1>.tit {background: url(/site/kotranews/images/main/snb-ico_01.png) no-repeat 0 center;}
+.snb-wrap .snbDp-1-2>.tit {background: url(/site/kotranews/images/main/snb-ico_02.png) no-repeat 0 center;}
+.snb-wrap .snbDp-1-3>.tit {background: url(/site/kotranews/images/main/snb-ico_03.png) no-repeat 0 center;}
+.snb-wrap .snbDp-1-4>.tit {background: url(/site/kotranews/images/main/snb-ico_04.png) no-repeat 0 center;}
+.snb-wrap .snbDp-2 {display: none;position:absolute;left: 137px;top:0;width: 243px;height: 100%;padding-left: 20px;background: #fff;border-left: 1px solid #dbdbdb;}
+.snb-wrap .on .snbDp-2 {display: block;}
+.snb-wrap .snbDp-2>.tit {display:block;padding: 40px 0 35px;font-size:25px;color:#333;}
+.snb-wrap .snbDp-2 .thumbnail {margin: 50px 30px 0 0;}
+.snb-wrap .snbDp-2 .thumbnail img {width: 100%;border: 1px solid #b3b6b8;}
+.snb-wrap .snbDp-2>ul>li {display: block;padding: 18px 10px;border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .snbDp-2>ul>li:first-child {border-top: 1px solid #dbdbdb;}
+
+@media (min-width: 1024px) {
+    .snb-area .btn-snb {right: 49px}
+    .snb-wrap {width: 55px;}
+}

@@ -29,4 +29,17 @@ $(".gnb-wrap > ul > li").on("mouseenter",function(){
 $(".gnb-wrap").on("mouseleave",function(){
 	bar.removeClass('on')
 });
+
+//snb-menu
+var snbWrap = $(".snb-area"),
+	snbBtn = snbWrap.find(".btn-snb"),
+	wrap = snbWrap.parents(".wrap");
+	snbWrap.css({
+		"height": wrap.height() - wrap.find('.headline-wrap').offset().top - 1
+		,"top": wrap.find('.headline-wrap').offset().top - 1
+	});
+
+	snbBtn.on("click",function(){
+		snbWrap.toggleClass('on')
+	});
 }, 0)
