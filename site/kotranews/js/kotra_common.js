@@ -662,6 +662,7 @@ $(document).ready(function(){
         $(".modal-total-search-wrap, .overlay").removeClass("active");
         /* 추가 :  20190104 */
         $('.setting-wrap').hide();
+        $('.js-snbArea').removeClass('on');
         /* //추가 :  20190104 */
     })
 
@@ -874,6 +875,8 @@ $(document).ready(function(){
       snbBtn.on("click", function(){
         if(!snbWrap.hasClass('on')) snbLi.first().click();
         else snbWrap.toggleClass('on');
+
+        $('.overlay').toggleClass('active');
       });
 
       //snb List
