@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+header {height:auto;border-bottom:1px solid #dbdbdb;}
+header .top-menu-wrap {height:auto;}
+.logo_search_area {width:1100px;height:110px;margin:0 auto;border-bottom:1px solid #dbdbdb;}
+#newLogo {width:184px;height:48px;margin:32px 0 0 84px;}
+#newLogo > a {display:block;width:184px;height:48px;background:url(/site/kotranews/images/common/k-logo.png) no-repeat 0 0;text-indent:-9999em;}
+#total_search_form {width:462px;height:50px;margin:34px 0 0 51px;border:3px solid #0c53a4;}
+#total_search_form select {width:136px;height:44px;padding:10px 15px;border:0;border-right:1px solid #0c53a4;background:url(/site/kotranews/images/common/bg_select_total_seach.png) no-repeat 100% 0;font-size:15px;font-weight:700;color:#083a90;-moz-appearance:none;-webkit-appearance:none;appearance:none;}
+#total_search_form select::-ms-expand {display:none;}
+#total_search_form select:active,
+#total_search_form select:focus {background-position:100% -44px;}
+#total_search_form input[type='text'] {width:264px;height:44px;padding:10px 15px;border:0;font-size:15px;font-weight:700;color:#083a90;}
+#total_search_form input[type='submit'] {width:56px;height:44px;border:0;background:url(/site/kotranews/images/common/btn_total_searh.png) no-repeat 0 0;text-indent:-9999em;}
+.gnb-wrap {border-right-color:#dbdbdb;border-left-color:#dbdbdb;}
+#gnb .gnbDp-1 > li + li + li + li + li + li {display:none;}
+#gnb.gnb-wrap > ul {padding:0;border-right:0;border-left-color:#dbdbdb;}
+.gnb-wrap > ul > li {width:202.8px;}
+.gnb-wrap > ul > li > a {padding:17px 0;background:url(/site/kotranews/images/common/btn_gnd_bar.png) no-repeat 0 50%;text-align:center;}
+.gnb-wrap > ul > li:first-child > a {background:none;}
+.total-menu-wrap {top:206px;}
+.gnb-wrap .btn-total-menu span:before {background:#497ebb;}
+.gnb-wrap .btn-total-menu span:after {background:#497ebb;}
+.gnb-wrap > ul > li > .gnb-tit-wrap {top:206px;}
+
+/* snb-area */
+.snb-area {position: absolute;right: 0;top: 232px;z-index: 999;}
+.snb-area .btn-snb {position: absolute;right: 135px;top: 224px;width: 27px;height:56px;background: #fafafa url(/site/kotranews/images/main/btn-snb.png) no-repeat center;overflow: hidden;font-size: 0;text-indent: -60px;border: 1px solid #dbdbdb;border-right:0;z-index: 1001;}
+.snb-area.on .btn-snb {right: 379px;}
+.snb-area.on .snb-wrap {width: 380px;}
+.snb-wrap {position: absolute;right: 0;top: 0;width: 136px;height: 100%;border: 1px solid #dbdbdb;border-right: 0;overflow: hidden;}
+.snb-wrap  > ul {position: absolute;left: 0;top: 0;width: 380px;height: 100%;background: #fafafa;}
+.snb-wrap .snbDp-1 {position:relative}
+.snb-wrap .snbDp-1>li {border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .snbDp-1>li:nth-child(odd) {background: #fff;}
+.snb-wrap .snbDp-1>li>.tit {display: block;height: 55px;line-height: 27px;font-size: 15px;color: #464646;padding: 14px 20px 14px 55px;letter-spacing: -1.5px;}
+.snb-wrap .snbDp-1-1>.tit {background: url(/site/kotranews/images/main/snb-ico_01.png) no-repeat 18px center;}
+.snb-wrap .snbDp-1-2>.tit {background: url(/site/kotranews/images/main/snb-ico_02.png) no-repeat 18px center;}
+.snb-wrap .snbDp-1-3>.tit {background: url(/site/kotranews/images/main/snb-ico_03.png) no-repeat 18px center;}
+.snb-wrap .snbDp-1-4>.tit {background: url(/site/kotranews/images/main/snb-ico_04.png) no-repeat 18px center;}
+.snb-wrap .snbDp-2 {display: none;position:absolute;left: 137px;top:0;width: 243px;height: 100%;padding-left: 20px;background: #fff;border-left: 1px solid #dbdbdb;}
+.snb-wrap .on .snbDp-2 {display: block;}
+.snb-wrap .snbDp-2>.tit {display:block;padding: 40px 0 35px;font-size:25px;color:#333;}
+.snb-wrap .snbDp-2 .thumbnail {margin: 50px 30px 0 0;}
+.snb-wrap .snbDp-2 .thumbnail .etc {text-align: right;margin-top: 20px;}
+.snb-wrap .snbDp-2 .thumbnail .etc .tit {display: block;margin-bottom: 8px;}
+.snb-wrap .snbDp-2 .thumbnail img {width: 100%;border: 1px solid #b3b6b8;}
+.snb-wrap .snbDp-2>ul>li {display: block;padding: 18px 10px;border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .snbDp-2>ul>li:first-child {border-top: 1px solid #dbdbdb;}
+
+/* snb-area (gnb) */
+/*.snb-area {position: absolute;right: 0;top: 232px;z-index: 999;}
+.snb-area .btn-snb {position: absolute;right: 135px;top: 224px;width: 27px;height:56px;background: #fafafa url(/site/kotranews/images/main/btn-snb.png) no-repeat center;overflow: hidden;font-size: 0;text-indent: -60px;border: 1px solid #dbdbdb;border-right:0;z-index: 1001;}
+.snb-area.on .btn-snb {right: 379px;}
+.snb-area.on .snb-wrap {width: 380px;}
+.snb-wrap {position: absolute;right: 0;top: 0;width: 136px;height: 100%;border: 1px solid #dbdbdb;border-right: 0;overflow: hidden;}
+.snb-wrap  > ul {position: absolute;left: 0;top: 0;width: 380px;height: 100%;background: #fafafa;}
+.snb-wrap .gnbDp-1 {position:relative}
+.snb-wrap .gnbDp-1>li {padding: 14px 20px;border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .gnbDp-1>li:nth-child(odd) {background: #fff;}
+.snb-wrap .gnbDp-1>li>a {display: inline-block;height: 27px;line-height: 27px;font-size: 15px;color: #464646;padding-left: 35px;letter-spacing: -1.5px;}
+.snb-wrap .gnbDp-1-1,.snb-wrap .gnbDp-1-2,.snb-wrap .gnbDp-1-3,.snb-wrap .gnbDp-1-4, .snb-wrap .gnbDp-1-5 {display: none;}
+.snb-wrap .gnbDp-1-6>a {background: url(/site/kotranews/images/main/snb-ico_01.png) no-repeat 0 center;}
+.snb-wrap .gnbDp-1-7>a {background: url(/site/kotranews/images/main/snb-ico_02.png) no-repeat 0 center;}
+.snb-wrap .gnbDp-1-8>a {background: url(/site/kotranews/images/main/snb-ico_03.png) no-repeat 0 center;}
+.snb-wrap .gnbDp-1-9>a {background: url(/site/kotranews/images/main/snb-ico_04.png) no-repeat 0 center;}
+.snb-wrap .gnbDp-2 {display: none;position:absolute;left: 137px;top:0;width: 243px;height: 100%;padding-left: 20px;background: #fff;border-left: 1px solid #dbdbdb;}
+.snb-wrap .on .gnbDp-2 {display: block;}
+.snb-wrap .gnbDp-2>a {display:block;padding: 40px 0 35px;font-size:25px;color:#333;}
+.snb-wrap .gnbDp-2 .thumbnail {margin: 50px 30px 0 0;}
+.snb-wrap .gnbDp-2 .thumbnail img {width: 100%;border: 1px solid #b3b6b8;}
+.snb-wrap .gnbDp-2>li {display: block;padding: 18px 10px;border-bottom: 1px solid #dbdbdb;}
+.snb-wrap .gnbDp-2>li:first-child {border-top: 1px solid #dbdbdb;}
+*/
+@media (max-width: 1360px) {
+    .snb-area .btn-snb {right: 53px}
+    .snb-wrap {width: 55px;}
+}

@@ -1,0 +1,131 @@
+<div class="setting-wrap js-myInfo">
+	<div class="head">
+		<h1><strong>My 관심사</strong> 설정</h1>
+		<button type="button" class="close" data-toggle="{'target':'.setting-wrap','overlay':true}" title="My 관심사 설정 팝업 닫기">×</button>
+	</div>
+	<div class="body">
+		<p>회원가입시 선택하셨던 관심사 항목을 수정할 수 있습니다.  아래 항목에서 선택해주세요.</p>
+		 <ul data-toggle-tab="{'tab':'.tab-tit'}">
+            <li class="tab1 on">
+                <a href="#" class="tab-tit">관심지역</a>
+                <fieldset>
+                	<legend class="hidden">관심지역</legend>
+            		<div class="myInfo_area">
+            			<button type="button" class="btn add" title="하단 테이블에서 행 추가">지역추가</button>
+            			<button type="button" class="btn del" title="하단 테이블에서 선택 된 행 삭제">지역삭제</button>
+            			<span>(관심지역은 5개까지 선택 가능합니다.)</span>
+            		</div>
+            		<div  class="tbl">
+	            		<table summary="나의 관심지역 설정 목록입니다.">
+	            			<caption>관심지역</caption>
+	            			<colgroup>
+	            				<col width="13%">
+	            				<col>
+	            				<col>
+	            			</colgroup>
+	            			<thead>
+	            				<tr>
+	            					<th scope="col"><a href="#" class="js-chkAll" title="모든 행 선택">전체</a></th>
+	            					<th scope="col">지역</th>
+	            					<th scope="col">국가</th>
+	            				</tr>
+	            			</thead>
+	            			<tbody>
+	            				<tr class="js-tempTr">
+	            					<td><input type="checkbox" name="area_chk" name="" title=""></td>
+	            					<td><select><option>선택</option><option>아시아</option></select></td>
+	            					<td><select><option>선택</option><option>일본(Japan)</option></select></td>
+	            				</tr>
+	            			</tbody>
+	            		</table>
+            		</div>
+                </fieldset>
+            </li>
+            <li class="tab2">
+                <a href="#" class="tab-tit">관심산업</a>
+                <fieldset>
+                	<legend>관심산업</legend>
+            		<label for="myInfo_industry_0" class="label on">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_0" checked="checked">
+            			농림수산식품
+            		</label>
+            		<label for="myInfo_industry_1" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_1">
+            			광물/에너지
+            		</label>
+            		<label for="myInfo_industry_3" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_3">
+            			화학
+            		</label>
+            		<label for="myInfo_industry_4" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_4">
+            			섬유/패션
+            		</label>
+            		<label for="myInfo_industry_5" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_5">
+            			생활소비재
+            		</label>
+            		<label for="myInfo_industry_6" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_6">
+            			철강/금속
+            		</label>
+            		<label for="myInfo_industry_7" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_7">
+            			기계류
+            		</label>
+            		<label for="myInfo_industry_8" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_8">
+            			자동차/수송기기
+            		</label>
+            		<label for="myInfo_industry_9" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_9">
+            			전자/전기
+            		</label>
+            		<label for="myInfo_industry_10" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_10">
+            			의료바이오
+            		</label>
+            		<label for="myInfo_industry_11" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_11">
+            			환경
+            		</label>
+            		<label for="myInfo_industry_12" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_12">
+            			유통/물류
+            		</label>
+            		<label for="myInfo_industry_13" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_13">
+            			건설/인프라/플랜트
+            		</label>
+            		<label for="myInfo_industry_14" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_14">
+            			IT
+            		</label>
+            		<label for="myInfo_industry_15" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_15">
+            			문화콘텐츠
+            		</label>
+            		<label for="myInfo_industry_16" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_16">
+            			금융
+            		</label>
+            		<label for="myInfo_industry_17" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_17">
+            			관광/교육/서비스
+            		</label>
+            		<label for="myInfo_industry_18" class="label">
+            			<input type="checkbox" name="myInfo_industry" id="myInfo_industry_18">
+            			기타
+            		</label>
+            		<p>(관심 산업은 3개까지 선택 가능합니다.)</p>
+                </fieldset>
+            </li>
+        </ul>
+
+        <div class="btn-area">
+        	<button type="button" class="save" title="my 관심사 설정">수정하기</button>
+        </div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/site/kotranews/js/myInfo.js"></script>
