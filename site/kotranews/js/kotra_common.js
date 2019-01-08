@@ -209,17 +209,10 @@ $(document)
         // update ui
         app.updateUI(selected, data);
       })
-    ;
-    var headlineNews = $('#headlineNews').bxSlider({
-        pager : true,
-        auto : true,
-        autoHover : true,
-        spped : 5000,
-        controls : false,
-        infiniteLoop : true
-    });
+    ;  
   })
 ;
+
 
 }).call(this, jQuery);
 
@@ -366,61 +359,126 @@ $(document)
 }));
 
 
-// function fn_depthCheck(siteMenuIdxs){
-//   var mainDepth = siteMenuIdxs.substring(0,2);
-//   var subDepth = siteMenuIdxs.substring(0,4)
-//   switch( mainDepth ){
-//    case "01":
-//          $(".hot-rank").show();
-//    break;
-//   }
-//   switch( subDepth ){
-//    case "0301":
-//          $(".report-hot-rank").show();
-//    break;
-//    case "0502":
-//          $(".video-hot-rank").show();
-//    break;
-//    case "0503":
-//          $(".video-hot-rank").show();
-//    break;
-//    case "0504":
-//          $(".video-hot-rank").show();
-//    break;
-
-//   }
-// }
+function fn_depthCheck(siteMenuIdxs){
+    var mainDepth = siteMenuIdxs.substring(0,2);
+    var subDepth = siteMenuIdxs.substring(0,4);
+    switch( mainDepth ){
+        case "01":
+                $(".hot-rank").show();
+        break;            
+        case "05":
+                $(".snb-wrap").after("<div class='mt20'><a href='/user/extra/kotranews/39/videoManagement/oldVideoList/jsp/LayOutPage.do'><img src='/site/kotranews/images/sub/img-iran-support.png' alt='설명회·세미나 (2003~2013) 바로가기'/></a></div>");
+        break;
+    }
+    switch( subDepth ){
+        case "0301":
+                $(".report-hot-rank").show();
+        break;
+        case "0502":
+                $(".video-hot-rank").show();
+        break;
+        case "0503":
+                $(".video-hot-rank").show();
+        break;
+        case "0504":
+                $(".video-hot-rank").show();
+        break;
+        
+    }
+}
+  
 
 $(document).ready(function(){
+	
+	$("a[href='#']").click(false);
 
-    $("a[href='#']").click(false);
+	//한진해운팝업 (기본)
+	;(function(){
+		
+		var showPopup = true;
+		var inputCloseDay = $("#gw-modal-closeday").val();
+				
+		if(inputCloseDay != ""){
+			
+			var today = new Date();
+		    var closeDay = new Date(inputCloseDay);
+		    if(today > closeDay){
+		    	showPopup = false;
+		    }
+		}
+				
+		if(showPopup){
+			var modal = $('.gw-modal');
+			
+			if( !$.cookie('gwModal') ){
+				$(window).resize(function(){
+					modal.css('right', ($(window).width() - 1100) / 2).show();	
+				}).resize();
+			}
+				
+			modal
+				.find('.close')
+				.click(function(){
+					modal.hide();
+				})
+			;
+			modal
+				.find('#day')
+				.change(function(){
+					$.cookie('gwModal', '1', { expires:1, path: '/' });
+					modal.hide();
+				})
+			;
+		}
+		
+		
 
-    ;(function(){
-        var modal = $('.gw-modal');
+	}());
+	
+	// (모달 추가)
+	;(function(){
+		
+		var showPopup = true;
+		var inputCloseDay = $("#gw-modal3-closeday").val();
+				
+		if(inputCloseDay != ""){
+			
+			var today = new Date();
+		    var closeDay = new Date(inputCloseDay);
+		    if(today > closeDay){
+		    	showPopup = false;
+		    }
+		}
+				
+		if(showPopup){
+			var modal = $('.gw-modal3');
+			
+			if( !$.cookie('gwModal3') ){
+				$(window).resize(function(){
+					modal.css('right', ($(window).width() - 1100) / 2).show();	
+				}).resize();
+			}
+				
+			modal
+				.find('.close')
+				.click(function(){
+					modal.hide();
+				})
+			;
+			modal
+				.find('#day3')
+				.change(function(){
+					$.cookie('gwModal3', '1', { expires:1, path: '/' });
+					modal.hide();
+				})
+			;
+		}
+		
+		
 
-        if( !$.cookie('gwModal') ){
-            $(window).resize(function(){
-                modal.css('right', ($(window).width() - 1100) / 2).show();
-            }).resize();
-        }
+	}());
 
-        modal
-            .find('.close')
-            .click(function(){
-                modal.hide();
-            })
-        ;
-        modal
-            .find('#day')
-            .change(function(){
-                $.cookie('gwModal', '1', { expires:1, path: '/' });
-                modal.hide();
-            })
-        ;
-
-    }());
-
-    //셧다운 팝업
+    //셧다운 팝업(추가)
     ;(function(){
         var modal2 = $('.gw-modal2');
 
@@ -525,20 +583,27 @@ $(document).ready(function(){
             description: 'KOTRA에 오시는 길 및 주차 안내의 대한 정보를 제공합니다.'
         }
     }
+    /**
+    if( !!metaObj[siteMenuIdxs] ){
+		$("title")
+			.text( metaObj[siteMenuIdxs].tit )
+		;
+		delete metaObj[siteMenuIdxs].tit;
 
-    // if( !!metaObj[siteMenuIdxs] ){
-    //  $.each(metaObj[siteMenuIdxs], function( key, val ){
-    //      $('head')
-    //          .prepend(
-    //              $('<meta />',{
-    //                  name: key,
-    //                  content: val
-    //              })
-    //          )
-    //      ;
-    //  });
-    // }
-
+		$.each(metaObj[siteMenuIdxs], function( key, val ){
+			$('head')
+				.prepend( 
+					$('<meta />',{
+						name: key,
+						content: val
+					})
+				)
+			;
+		})
+		;
+		
+	} 
+ */
 
     //gnb
     $(".gnb-wrap > ul > li").on("mouseenter keydown",function(){
@@ -662,7 +727,6 @@ $(document).ready(function(){
         $(".modal-total-search-wrap, .overlay").removeClass("active");
         /* 추가 :  20190104 */
         $('.setting-wrap').hide();
-        $('.js-snbArea').removeClass('on');
         /* //추가 :  20190104 */
     })
 
@@ -865,24 +929,33 @@ $(document).ready(function(){
       snbLi = snbWrap.find('.snbDp-1>li>a.tit'),
       snbBtn = snbWrap.find(".js-snbBtn"),
       wrap = snbWrap.parents(".wrap"),
-      snbTop = wrap.find('.js-headlineNews');
+      snbTop = wrap.find('.js-headlineNews').offset().top - 1;
 
       //snb init
       snbWrap.css({
-        "height": wrap.height() - snbTop.offset().top - 1
-        ,"top": snbTop.offset().top - 1
-      });
+        "height": wrap.height() - snbTop
+        ,"top": snbTop
+      }).find(".snb-wrap").append("<button type='button' class='btn-go-top'>Top<span>▲</span></button>");
+
       snbBtn.on("click", function(){
         if(!snbWrap.hasClass('on')) snbLi.first().click();
         else snbWrap.toggleClass('on');
 
-        $('.overlay').toggleClass('active');
+        // $('.overlay').toggleClass('active');
       });
 
       //snb List
       snbLi.on("click", function() {
         if(!snbWrap.hasClass('on')) snbWrap.addClass('on');
       });
+
+      var goTop = $('.btn-go-top');
+      goTop.on('click', function(){$('html, body').animate({scrollTop : 0}), 400;return false;});
+
+      $(window).scroll(function(){
+        if($(document).scrollTop() > snbTop){snbWrap.css('top','0');goTop.show()} else {var top = snbTop - ( $(document).scrollTop() ); snbWrap.css('top', top);goTop.hide()}
+      });
+
       /* //추가 :  20190104 */
   }, 0);
 
